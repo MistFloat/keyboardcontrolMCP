@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-keyboard-mcp"
+version = "0.1.0"
+description = "A Windows MCP server that lets Codex control the keyboard, including elevated applications."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Codex" }]
+keywords = ["mcp", "codex", "keyboard", "windows", "automation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Win32 (MS Windows)",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: Microsoft :: Windows",
+  "Programming Language :: Python :: 3",
+  "Topic :: Desktop Environment",
+]
+dependencies = []
+
+[project.scripts]
+codex-keyboard-mcp = "keyboard_mcp.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["keyboard_mcp*"]
+
